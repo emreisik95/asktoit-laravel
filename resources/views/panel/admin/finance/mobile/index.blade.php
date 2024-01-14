@@ -20,7 +20,7 @@
         </div>
     </div>
     <!-- Page body -->
-    @if($settings_two->liquid_license_type != "Extended License")
+    @if($settings_two->liquid_license_type === "Extended License")
         <div class="container-xl">
             <div class="bg-red-100 text-red-600 rounded-xl !p-3 dark:bg-orange-600/20 dark:text-orange-200 top-40 left-0 right-0 mx-auto text-center">
                 {{__('To access this page, you should upgrade to Extended License.') }}  <a href="{{route('dashboard.admin.license.index')}}"><u> {{__('Upgrade License') }}</u></a>
@@ -105,7 +105,7 @@
                                         @endif
                                     </td>
 
-                                    
+
                                     <td class="whitespace-nowrap">
                                         @if(env('APP_STATUS') == 'Demo')
                                         <a onclick="return toastr.info('This feature is disabled in Demo version.')"
@@ -125,7 +125,7 @@
                                         @endif
                                     </td>
 
-                                    
+
 
                                 </tr>
                             @endforeach
@@ -144,7 +144,7 @@
                             <div class="h-12 w-full flex items-center text-center border-b fw-bold">{{__('Update Plan')}}</div>
                             <div class="flex flex-row"><label class="form-label">{{__('Plan Name')}} : </label><div id="plan_name_label" class="pl-1 fw-bold"></div></div>
                             <div class="flex flex-row"><label class="form-label">{{__('Plan Type')}} : </label><div id="plan_type_label" class="pl-1 fw-bold"></div></div>
-                            
+
                             <label class="form-label">{{__('RevenueCat Package Id')}} : </label>
                             <div class="flex items-center h-12">
                                 <input type="text" class="form-control" id="revenuecat_package_id" name="revenuecat_package_id" required placeholder="{{__('Please enter Package Identifier')}}">
@@ -153,7 +153,7 @@
                             <div class="flex items-center h-12">
                                 <input type="text" class="form-control" id="revenuecat_entitlement_id" name="revenuecat_entitlement_id" required placeholder="{{__('Please enter Entitlement Identifier')}}">
                             </div>
-                            
+
                             <div class="flex items-center h-12 mb-2"><button type="submit" class="btn btn-primary h-8 w-64">Save</button></div>
                         </div>
                         <div class="card w-72 p-3">

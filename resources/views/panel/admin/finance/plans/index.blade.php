@@ -20,7 +20,7 @@
         </div>
     </div>
     <!-- Page body -->
-    @if($settings_two->liquid_license_type != "Extended License")
+    @if($settings_two->liquid_license_type === "Extended License")
         <div class="container-xl">
             <div class="bg-red-100 text-red-600 rounded-xl !p-3 dark:bg-orange-600/20 dark:text-orange-200 top-40 left-0 right-0 mx-auto text-center">
                 {{__('To access this page, you should upgrade to Extended License.') }}  <a href="{{route('dashboard.admin.license.index')}}"><u> {{__('Upgrade License') }}</u></a>
