@@ -6,7 +6,7 @@
         <div class="absolute top-0 left-0 right-0 container-fluid">
             <div class="items-center p-8 row max-lg:px-1">
                 <div class="col">
-                    <a href="{{ route('index') }}" class="navbar-brand lg:w-1/4">
+                    <a href="{{ route('index') }}" class="navbar-brand max-w-[270px]">
                         @if (isset($setting->logo_dashboard))
                             <img src="/{{ $setting->logo_dashboard_path }}"
                                 @if (isset($setting->logo_dashboard_2x_path)) srcset="/{{ $setting->logo_dashboard_2x_path }} 2x" @endif
