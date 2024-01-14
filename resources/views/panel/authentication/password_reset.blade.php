@@ -6,7 +6,7 @@
         <div class="absolute top-0 left-0 right-0 container-fluid">
             <div class="items-center p-8 row">
                 <div class="col">
-                    <a href="{{route('index')}}" class="navbar-brand navbar-brand-autodark">
+                    <a href="{{route('index')}}" class="navbar-brand navbar-brand-autodark lg:w-1/4">
                         @if(isset($setting->logo_dashboard))
                             <img src="/{{$setting->logo_dashboard_path}}" @if ( isset($setting->logo_dashboard_2x_path) ) srcset="/{{$setting->logo_dashboard_2x_path}} 2x" @endif alt="{{$setting->site_name}}" class="group-[.navbar-shrinked]/body:hidden dark:hidden">
                             <img src="/{{$setting->logo_dashboard_dark_path}}" @if ( isset($setting->logo_dashboard_dark_2x_path) ) srcset="/{{$setting->logo_dashboard_dark_2x_path}} 2x" @endif alt="{{$setting->site_name}}" class="hidden group-[.navbar-shrinked]/body:hidden dark:block">
