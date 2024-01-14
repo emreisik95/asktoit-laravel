@@ -1057,7 +1057,7 @@
                             <span class="max-lg:hidden">{{ __('Admin Panel') }}</span>
                         </a>
                     @endif
-                    @if ($settings_two->liquid_license_type == 'Extended License')
+                    @if ($settings_two->liquid_license_type != 'Extended License')
                         @if (getSubscriptionStatus())
                             <a class="btn max-xl:hidden" href="{{ route('dashboard.user.payment.subscription') }}">
                                 {{ getSubscriptionName() }} - {{ getSubscriptionDaysLeft() }}
