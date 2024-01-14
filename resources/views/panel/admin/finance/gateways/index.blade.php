@@ -22,7 +22,7 @@
         </div>
     </div>
     <!-- Page body -->
-    @if($settings_two->liquid_license_type != "Extended License")
+    @if($settings_two->liquid_license_type === "Extended License")
         <div class="container-xl">
             <div class="bg-red-100 text-red-600 rounded-xl !p-3 dark:bg-orange-600/20 dark:text-orange-200 top-40 left-0 right-0 mx-auto text-center">
                 {{__('To access this page, you should upgrade to Extended License.') }}  <a href="{{route('dashboard.admin.license.index')}}"><u> {{__('Upgrade License') }}</u></a>
@@ -35,7 +35,7 @@
                 <div class="row row-cols-auto  flex justify-content-center gap-3" >
 
                     @foreach($gateways as $entry)
-                        
+
                         <div class="card w-[150px] h-[250px] pt-0 px-0 rounded-md relative">
                             <div class="w-[148px] h-[148px] flex justify-content-center rounded-md pt-1 {{ $entry['whiteLogo'] == 1 ? 'bg-[#1a1d23]' : ''}} ">
                                 <img src="{{ url('').$entry['img'] }}" style="max-width:130px; max-height:130px; object-fit: contain; width: 100%;  " alt="{{ $entry['title'] }}" class=""/>
@@ -60,7 +60,7 @@
                             @endif
                             @endif
                         </div>
-                        
+
                     @endforeach
 
                 </div>
