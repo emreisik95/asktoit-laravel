@@ -8,7 +8,7 @@
 	];
 	$bg_classname = [
 		'outline' => '',
-		'solid' => 'bg-[#343C57]'
+		'solid' => 'bg-[#010038]'
 	];
 	$border_classname = [
 		'outline' => 'border-[2px]',
