@@ -26,6 +26,7 @@
                 </div>
             </div>
         </div>
+
         <div class="container-fluid">
             <div class="row items-stretch min-h-[100vh] max-lg:py-11">
                 <div class="flex flex-col justify-center col-lg-6">
